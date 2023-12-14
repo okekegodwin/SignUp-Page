@@ -179,7 +179,7 @@ footer a { color: #2EC4B6; }
     height: 30px;
   }
 
-  form div.date-of-birth {
+  form div.date-of-birth input {
     width: 100%;
     -moz-appearance: textfield;
     -webkit-appearance: none;
