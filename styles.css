@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6fbfa;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+.left-section {
+  position: relative;
+  top: 30px;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.left-section .logo { position: relative; }
+
+.logo .background-logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #F37920, #F37920 100%), linear-gradient(135deg, #FFC624, #FFC624), linear-gradient(225deg, #3CBDB2, #3CBDB2) , linear-gradient(225deg, #9ECD43, #9ECD43);
+  background-size: 50% 50%;
+  background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.logo .img-icon {
+  position: absolute;
+  top: 30px;
+  left: 29.5px;
+  transform: rotate(90deg);
+  width: 20px;
+}
+
+.logo .white-dot {
+  position: absolute;
+  top: 27px;
+  left: 39px;
+  border: 1px solid white;
+  width: 2px;
+  border-radius: 50%;
+}
+
+.left-section h1 {
+  color: #000B0A;
+  font-size: 40px;
+}
+
+.left-section p {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.right-section {
+  position: relative;
+  top: 41px;
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 50px 0 #0408131A;
+}
+
+.right-section form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas: "first     last"
+                       "gender    dob"
+                       "weight    height"
+                       "activity  activity"
+                       "password  password"
+                       "button    button";
+}
+
+.right-section form .first-name { grid-area: first; }
+.right-section form .last-name {grid-area: last; }
+.right-section form .gender { grid-area: gender; }
+.right-section form .date-of-birth { grid-area: dob; }
+.right-section form .weight { grid-area: weight; }
+.right-section form .height { grid-area: height; }
+.right-section form .activity-level { grid-area: activity; }
+.right-section form .password { grid-area: password; }
+
+form .button:hover { background-color: #FFC624; }
+
+.right-section form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form div label { font-size: 16px; }
+
+form div input, 
+form div select {
+  height: 35px;
+  border-radius: 3px;
+  padding-left: 5px;
+  border: 1px solid #737373;
+}
+
+.right-section form .button { 
+  grid-area: button;
+  padding: 10px 0 10px 0;
+  background-color: #2EC4B6;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.right-section footer {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer a { color: #2EC4B6; }
+
+
+@media screen and (max-width: 528px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
+
+  .left-section {
+    row-gap: 1.5rem;
+  }
+
+  .left-section .background-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo .img-icon {
+    top: 23px;
+    left: 22px;
+    width: 15px;
+  }
+
+  .logo .white-dot {
+    top: 20px;
+    left: 29px;
+  }
+
+  .left-section h1 { font-size: 30px; }
+  .left-section p { font-size: 14px; }
+
+  .right-section {
+    margin-top: 20px;
+  }
+  .right-section form { display: block; }
+  .right-section form div { margin-top: 20px; }
+  form div label {font-size: 14px;}
+
+  form div input, 
+  form div select {
+    height: 30px;
+  }
+
+  .right-section form .button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px 0 8px 0;
+  }
+
+  form .button:hover { background-color: #2EC4B6; }
+  .right-section footer { font-size: 10px; }
+}
