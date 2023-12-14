@@ -179,6 +179,12 @@ footer a { color: #2EC4B6; }
     height: 30px;
   }
 
+  form div.date-of-birth {
+    width: 100%;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+  }
+
   .right-section form .button {
     width: 100%;
     margin-top: 20px;
